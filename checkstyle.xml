@@ -44,14 +44,20 @@
         <property name="eachLine" value="true"/>
     </module>
 
+    <module name="SuppressWarningsFilter"/>
+
     <module name="TreeWalker">
         <property name="tabWidth" value="4"/>
+
+        <module name="SuppressWarningsHolder"/>
 
         <module name="SuppressionCommentFilter"/>
 
         <!-- Checks for Javadoc comments.                     -->
         <!-- See http://checkstyle.sf.net/config_javadoc.html -->
-        <module name="JavadocMethod"/>
+        <module name="JavadocMethod">
+            <property name="allowMissingReturnTag" value="true"/>
+        </module>
         <module name="JavadocType">
             <property name="excludeScope" value="package"/>
         </module>
@@ -87,6 +93,7 @@
 
         <module name="MethodLength">
             <property name="max" value="200"/>
+            <property name="countEmpty" value="false"/>
         </module>
         <module name="ParameterNumber"/>
 
