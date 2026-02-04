@@ -22,6 +22,12 @@
         <property name="maximum" value="0"/>
         <property name="message" value="Line has trailing spaces."/>
     </module>
+    <module name="RegexpMultiline">
+        <property name="format" value="/\*\*([^*]|\*(?!/))*?\*/\s*\r?\n\s*\r?\n"/>
+        <property name="message" value="There must be no empty line after Javadoc comment."/>
+        <property name="maximum" value="0"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
     <module name="LineLength">
         <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
         <property name="max" value="180"/>
@@ -41,12 +47,12 @@
         <module name="JavadocType">
             <property name="excludeScope" value="package"/>
         </module>
+        <!--
         <module name="JavadocVariable">
-            <!--
             <property name="excludeScope" value="private"/>
-            -->
             <property name="accessModifiers" value="protected"/>
         </module>
+        -->
         <!--
         <module name="JavadocStyle"/>
         -->
@@ -125,6 +131,10 @@
         <module name="TodoComment"/>
         -->
         <module name="UpperEll"/>
+        <module name="EmptyLineSeparator">
+            <property name="allowNoEmptyLineBetweenFields" value="true"/>
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
+        </module>
     </module>
 
     <module name="SuppressionFilter">
