@@ -134,6 +134,7 @@
         <module name="EmptyLineSeparator">
             <property name="allowNoEmptyLineBetweenFields" value="true"/>
             <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/>
+            <property name="allowMultipleEmptyLines" value="false"/>
         </module>
     </module>
 
