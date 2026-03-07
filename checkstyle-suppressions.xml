@@ -4,5 +4,8 @@
         "https://checkstyle.org/dtds/suppressions_1_2.dtd">
 
 <suppressions>
+    <!-- Test methods are frequently named with should-when approach (shouldDoSomething_whenCondition) -->
     <suppress checks="MethodName" files="[\\/]src[\\/]test[\\/]java[\\/]" />
+    <!-- Tests usually contain a lot of magic numbers for test cases -->
+    <suppress checks="MagicNumber" files="[\\/]src[\\/]test[\\/]java[\\/]" />
 </suppressions>
