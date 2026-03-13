@@ -40,7 +40,7 @@
     </module>
 
     <!-- 📁 RegExp Checks -->
-    <!-- https://checkstyle.sourceforge.io/checks/regexp/index.html -->
+    <!-- See https://checkstyle.org/checks/regexp/index.html -->
     <module name="RegexpSingleline">
         <property name="format" value="\s+$"/>
         <property name="minimum" value="0"/>
